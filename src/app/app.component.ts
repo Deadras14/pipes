@@ -9,6 +9,18 @@ export class AppComponent {
   name: string = '';
   date: string = '';
   amount: number = 0;
+  height: number = 0;
+  
+  car = {
+    make: "Toyota",
+    model: "Camry",
+    year: 2000
+  }
+  
+  onHeightChange(event: any){
+    const value = event.target.value;
+    this.height = parseFloat(value);
+  }
 
   onNameChange(event: any){
     const value = event.target.value;
