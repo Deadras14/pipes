@@ -39,7 +39,7 @@
       </div>
     </div>
   </div>
-  
+
   <div class="row">
     <div class="form-group col">
       <label>Height</label>
@@ -49,6 +49,19 @@
       <label><b>Height</b></label>
       <div>
         {{ height | number: "1.0-3" }}
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label>Miles</label>
+      <input class="form-control" (input)="onMilesChange($event)" >
+    </div>
+    <div class="col">
+      <label><b>Kilometers</b></label>
+      <div>
+        {{ miles | convert: "km" }}
       </div>
     </div>
   </div>
